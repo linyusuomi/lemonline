@@ -31,18 +31,7 @@
 				<div class="footer">
 					  <p id="back-top"><a href="#top"><span></span></a> </p>
 					  <div class="footer-cols-wrapper">
-						<div class="footer-col">			
-							<h4><?php echo $this->__('Information') ?></h4>
-							<div class="footer-col-content">
-								<?php echo $this->getChildHtml('cms_footer_links') ?>
-								<?php echo $this->getChildHtml('footer_links') ?>
-							</div>
-						</div>
 						<?php echo $this->getChildHtml('footer_list') ?>
-						<div class="footer-col block-newsletter last">
-							<?php echo $this->getChildHtml('left.newsletter'); ?>
-							<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('list_icon')->toHtml() ?>
-						</div>
 					  </div>
 					<address><?php echo $this->getCopyright() ?></address>
 					<?php echo $this->getChildHtml('store_switcher') ?>
