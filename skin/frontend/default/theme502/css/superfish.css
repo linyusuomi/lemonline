@@ -14,27 +14,24 @@
   position: relative;
   z-index: 99;
 }
-.sf-menu > li {  background: url(../images/sf-menu-border.gif) no-repeat right top ;}
+.sf-menu > li {  }
 .sf-menu li a {
   display: block;
-  color: #383737;
+  color: #666;
   text-decoration: none;
   position: relative;
   padding: 0;
 }
 .sf-menu li.home-link a span {
-  background: url(../images/home-link.png) no-repeat center center;
-  width: 52px;
-  height: 50px;
-  display: block;
-  padding: 0;
+  width: 155px;
+  padding-left: 10px;
 }
-.cms-index-index .sf-menu li.home-link {  background: url(../images/menu-active.gif) repeat-x center top;}
+.cms-index-index .sf-menu li.home-link { }
 .sf-menu > li > a > span {
   display: block;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: bold;
   line-height: 17px;
-  color: #000000;
   text-transform: uppercase;
   cursor: pointer;
   white-space: nowrap;
@@ -47,7 +44,7 @@
 
 .sf-menu > li.sfHover > a,
 .sf-menu> li > a:hover,
-.sf-menu > li.active > a { color: #feb802;  background: url(../images/menu-active.gif) repeat-x center top;}
+.sf-menu > li.active > a { }
 
 .sf-menu > li.sfHover > a span,
 .sf-menu > li > a:hover span,
