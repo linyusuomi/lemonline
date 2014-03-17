@@ -34,9 +34,10 @@
 <?php if ($this->getIsNeedToDisplaySideBar()):?>
 <div class="block-cart-header">
     <?php $_cartQty = $this->getSummaryCount() ?>
-    <h3><?php echo $this->__('Cart') ?>:</h3>
+    <h3><?php echo $this->__('Cart') ?></h3>
     <div class="block-content">
     <?php if ($_cartQty>0): ?>
+        <?php echo ":" ; ?>
         <div class="summary">
             <?php if ($_cartQty==1): ?>
                 <p class="amount-2"><?php echo $this->__('<strong title="%s">%s item</strong>', $this->getUrl('checkout/cart'), $_cartQty) ?> -
@@ -76,13 +77,6 @@
                     <script type="text/javascript">decorateList('cart-sidebar', 'none-recursive')</script>
                 </div>
             </div>
-    <?php else: ?>
-        <div class="empty">
-			<?php echo $this->__('0 item(s)') ?> - <?php echo Mage::helper('checkout')->formatPrice($this->getSubtotal()) ?>
-            <div class="cart-content">
-				<?php echo $this->__('You have no items in your shopping cart.') ?>
-            </div>
-        </div>
     <?php endif ?>
     <div class="clear"></div>
     </div>

@@ -27,36 +27,7 @@
  * @var Mage_Page_Block_Html_Header $this
  */
 ?>
-<div class="header-container-top">
-    <div class="container">
-        <div class="row">
-            <div class="span12">
-                <div class="header">
-                    <div class="quick-access">
-                        <div class="header-links">
-                            <?php echo $this->getChildHtml('topLinksLeft') ?>
-                            <?php echo $this->getChildHtml('topLinks') ?>
-                        </div>
-                    </div>
-                    <div class="header-buttons">
-                        <div class="header-button top-login">
-                            <?php echo $this->getChildHtml('topLinksLeft') ?>
-                        </div>
-                        <div class="header-button menu-list">
-                            <a href="#"></a>
-                            <?php echo $this->getChildHtml('topLinks') ?>
-                        </div>
-                        <?php echo $this->getChildHtml('currency') ?>
-                        <?php echo $this->getChildHtml('store_language') ?>
-                    </div>
-                    <p class="welcome-msg"><?php echo $this->getWelcome() ?> <?php echo $this->getAdditionalHtml() ?></p>
-                    <div class="clear"></div>
-                </div>
-            </div>
-        </div>
-        <div class="clear"></div>
-    </div>
-</div>
+
 <div class="header-container">
 	<div class="container">
 		<div class="row">
@@ -67,8 +38,12 @@
                     <?php else:?>
                         <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
                     <?php endif?>
-                        <?php echo $this->getChildHtml('cart_header'); ?>                
+                    <div class="header-right-banner">
+                    <?php echo $this->getChildHtml('store_language') ?>
+                    <?php echo $this->getChildHtml('topLinksLeft') ?> 
+                    <?php echo $this->getChildHtml('cart_header'); ?>                
                     <?php echo $this->getChildHtml('topSearch') ?>
+                    </div>
                     <div class="clear"></div>
                     <?php echo $this->getChildHtml('topContainer'); ?>
                 </div>

@@ -6,7 +6,7 @@
 .fluid_container_wrap {
 	width: 100%; 
 	overflow: hidden; 
-	background: url(../images/container-bg.gif) repeat-x center top; 
+	background: #bc968a; 
 	border-bottom: 1px solid #fff;
 	position: relative;
 }
@@ -223,6 +223,7 @@
 	z-index: 4;
 }
 .camera_wrap .camera_pag .camera_pag_ul {
+        display: none;
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -1137,7 +1138,7 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 979px) {
-	.fluid_container_wrap {padding-bottom: 18px;}
+	.fluid_container_wrap {}
 	.camera_caption {top:11%;}
 	.camera_caption > div {width: 740px; margin: 0 auto; max-width: inherit;}
 	.camera_caption div ul {display: none;}
@@ -1153,7 +1154,7 @@
 }
 
 @media only screen and (max-width: 767px) {
-	.fluid_container_wrap {padding-bottom: 18px;}
+	.fluid_container_wrap {}
 	.camera_caption {top:11%; }
 	.camera_caption > div {
 		width: 100%; 

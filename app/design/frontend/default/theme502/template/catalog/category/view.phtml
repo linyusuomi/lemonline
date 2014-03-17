@@ -40,7 +40,61 @@
         $_imgHtml = $_helper->categoryAttribute($_category, $_imgHtml, 'image');
     }
 ?>
-<div class="page-title category-title">
+<?php
+
+$category_payment_methods = Mage::getModel('catalog/category')->loadByAttribute('name', 'payment methods');
+$category_delivery_methods = Mage::getModel('catalog/category')->loadByAttribute('name', 'delivery methods');
+$category_catalog = Mage::getModel('catalog/category')->loadByAttribute('name', 'catalog');
+$category_themes = Mage::getModel('catalog/category')->loadByAttribute('name', 'themes');
+
+$category_payment_methods_count = Mage::getModel('catalog/category')->load($category_payment_methods->getId())->getProductCount();
+$category_delivery_methods_count = Mage::getModel('catalog/category')->load($category_delivery_methods->getId())->getProductCount();
+$category_catalog_count = Mage::getModel('catalog/category')->load($category_catalog->getId())->getProductCount();
+$category_themes_count = Mage::getModel('catalog/category')->load($category_themes->getId())->getProductCount();
+
+?>
+<div class="category-list span12">
+    <div class="category-list-title"><?php echo $this->__('magento add-ons') ?></div>
+    <ul class="span10">
+        <li class="">
+            <a href="<?php echo Mage::getBaseUrl() ?>magento-add-ons/catalog.html">
+            <div class="category_payment_methods"></div>
+            <div class="category-name">
+                <span class="arrow">></span>
+                <span><?php echo $category_payment_methods->getName(); ?>(<?php echo $category_payment_methods_count; ?>)</span>
+            </div>
+            </a>
+        </li> 
+        <li class="">
+            <a href="<?php echo Mage::getBaseUrl() ?>magento-add-ons/delivery-methods.html">
+            <div class="category_delivery_methods"></div>
+            <div class="category-name">
+                <span class="arrow">></span>
+                <span><?php echo $category_delivery_methods->getName(); ?>(<?php echo $category_delivery_methods_count; ?>)</span>
+            </div>
+            </a>
+        </li> 
+        <li class="">
+            <a href="<?php echo Mage::getBaseUrl() ?>magento-add-ons/themes.html">
+            <div class="category_catalog"></div>
+            <div class="category-name">
+                <span class="arrow">></span>
+                <span><?php echo $category_catalog->getName(); ?>(<?php echo $category_catalog_count; ?>)</span>
+            </div>
+            </a>
+        </li> 
+        <li class="">
+            <a href="<?php echo Mage::getBaseUrl() ?>magento-add-ons/payment-methods.html">
+            <div class="category_themes"></div>
+            <div class="category-name">
+                <span class="arrow">></span>
+                <span><?php echo $category_themes->getName(); ?>(<?php echo $category_themes_count; ?>)</span>
+            </div>
+            </a>
+        </li> 
+    </ul>
+</div>
+<div class="page-title category-title span12">
     <?php if($this->IsRssCatalogEnable() && $this->IsTopCategory()): ?>
         <a href="<?php echo $this->getRssLink() ?>" class="link-rss"><?php echo $this->__('Subscribe to RSS Feed') ?></a>
     <?php endif; ?>

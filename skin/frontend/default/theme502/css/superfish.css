@@ -1,7 +1,6 @@
 .nav-container {
   position: relative;
   z-index: 2;
-  background: url(../images/nav-container.gif) repeat-x center top;
   padding-bottom: 5px;
 }
 .sf-menu {
@@ -36,6 +35,7 @@
   cursor: pointer;
   white-space: nowrap;
   padding: 16px 20px 18px;
+  padding-left: 10px;
 }
 .sf-menu li ul a span {  white-space: normal;}
 .sf-menu > li.parent > a > span {  background: url(../images/marker-8.gif) center 38px no-repeat;}
@@ -48,7 +48,7 @@
 
 .sf-menu > li.sfHover > a span,
 .sf-menu > li > a:hover span,
-.sf-menu > li.active > a span {  color: #feb802;}
+.sf-menu > li.active > a span {  color: #ff9e59;}
 .sf-menu li a:hover {  text-decoration: none;}
 
 .sf-menu ul {

@@ -32,24 +32,16 @@
  */
 ?>
 <?php if(count($this->getStores())>1): ?>
-
+<?php $currentStore = Mage::app()->getLocale()->getLocaleCode(); ?>
 <div class="header-button lang-list">
-	<a href="#"></a>
-	<ul>
-    <?php foreach ($this->getStores() as $_lang): ?>
-        <?php $_selected = ($_lang->getId() == $this->getCurrentStoreId()) ? ' selected="selected"' : '' ?>
-		<li>
-			<a href="<?php echo $_lang->getCurrentUrl() ?>" title="<?php echo $this->htmlEscape($_lang->getLocaleCode()) ?>"><?php echo $this->htmlEscape($_lang->getName()) ?></a>
-			<span>
-				<?php
-					if ($this->getCurrentStoreId()==$_lang->getId()) {
-						$CurrentStore_getId = $this->htmlEscape($_lang->getLocaleCode());
-						echo substr($CurrentStore_getId, 0, 2); 					
-					}
-				?>
-			</span>
-		</li>
+<?php foreach ($this->getStores() as $_lang): ?>             
+        <?php if( $currentStore !== $_lang->getLocaleCode() ): ?>
+            <?php if ($currentStore == "en_US"): ?>
+            <a href="<?php echo $_lang->getCurrentUrl() ?>" title="<?php echo $this->htmlEscape($_lang->getLocaleCode()) ?>"><?php echo $this->__('Suomi'); ?></a>  
+            <?php else: ?>
+            <a href="<?php echo $_lang->getCurrentUrl() ?>" title="<?php echo $this->htmlEscape($_lang->getLocaleCode()) ?>"><?php echo $this->__('In English'); ?></a>  
+            <?php endif; ?>
+        <?php endif; ?>         
     <?php endforeach; ?>
-	</ul>
 </div>
 <?php endif; ?>

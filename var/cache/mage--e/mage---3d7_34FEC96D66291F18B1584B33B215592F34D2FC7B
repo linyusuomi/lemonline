@@ -1,0 +1,41 @@
+<div class="footer-container">
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<div class="footer">
+					  <p id="back-top"><a href="#top"><span></span></a> </p>
+					  <div class="footer-cols-wrapper">
+						<div class="footer-col contact">
+	<h4>Customer service</h4>
+	<div class="footer-col-content">
+		<div class="phone"><span class="icon">050 309 2100</span></div>
+                <div class="email"><span class="icon">info@lemonline.fi</span></div>
+	</div>
+</div>
+<div class="footer-col">
+	<h4>TUKI</h4>
+	<div class="footer-col-content">
+		<ul>
+			<li><a href="#">Tuotteiden ohjeet</a></li>
+			<li><a href="#">Kysymyksiä ja vastauksia</a></li>
+			<li><a href="#">Palaute ja tuki</a></li>
+			<li><a href="#">Myynti ja käyttöehdot</a></li>
+			<li><a href="#">Tietosuoja ja rekisteriseloste</a></li>
+		</ul>
+                <div class="footer-icon">
+                <div class="icon-partner">solution partner</div>
+                <div class="icon-soprano">soprano</div>
+                </div>
+	</div>
+</div>					  </div>
+					<address>&copy; <script type="text/javascript">var mdate = new Date(); document.write(mdate.getFullYear());</script> Magento Demo Store. All Rights Reserved.</address>
+										<a rel="nofollow" href="#" class="copyright" target="_blank">&copy; 2013 Lemonline Oy</a>                                        <div class="footer-bank">bank</div>
+					<div class="clear"></div>
+					<div class="paypal-logo">
+    <a href="#" title="Additional Options" onclick="javascript:window.open('https://www.paypal.com/us/cgi-bin/webscr?cmd=xpt/Marketing/popup/OLCWhatIsPayPal-outside','paypal','width=600,height=350,left=0,top=0,location=no,status=yes,scrollbars=yes,resizable=yes'); return false;"><img src="https://www.paypalobjects.com/en_US/i/bnr/bnr_nowAccepting_150x60.gif" alt="Additional Options" title="Additional Options" /></a>
+</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

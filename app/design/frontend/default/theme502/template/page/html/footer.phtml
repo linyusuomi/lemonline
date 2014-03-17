@@ -37,9 +37,10 @@
 					<?php echo $this->getChildHtml('store_switcher') ?>
 					<?php $current_page = Mage::app()->getFrontController()->getRequest()->getRouteName(); 
 						if ($current_page == 'cms'):
-							echo 'More <a rel="nofollow" href="http://www.templatemonster.com/category/games-magento-templates/" target="_blank">Games Magento Templates at TemplateMonster.com</a>';
+							echo '<a rel="nofollow" href="#" class="copyright" target="_blank">&copy; 2013 Lemonline Oy</a>';
 						endif;
 					?>
+                                        <div class="footer-bank">bank</div>
 					<div class="clear"></div>
 					<?php echo $this->getChildHtml('paypal.partner.right.logo'); ?>
 				</div>
