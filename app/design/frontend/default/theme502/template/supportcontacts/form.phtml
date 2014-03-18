@@ -37,10 +37,32 @@
                 </div>
                 
             </li>
+            <li class="fields">
+                <div class="field">
+                    <label for="website url" class="required"><em>*</em><?php echo Mage::helper('supportcontacts')->__('Website url') ?></label>
+                    <div class="input-box">
+                        <input name="website_url" id="subject" title="<?php echo Mage::helper('supportcontacts')->__('Website url') ?>" value="" class="input-text" type="text" />
+                    </div>
+                </div>
+                <div class="field">
+                     <label for="magento version" class="required"><em>*</em><?php echo Mage::helper('supportcontacts')->__('Magento version') ?></label>
+                     <div class="input-box">
+                        <input name="magento_version" id="telephone" title="<?php echo Mage::helper('supportcontacts')->__('Magento version') ?>" value="" class="input-text" type="text" />
+                     </div>
+                </div>
+            </li>
+            <li>
+                <div class="field">
+                     <label for="magento module" class="required"><em>*</em><?php echo Mage::helper('supportcontacts')->__('Magento module') ?></label>
+                     <div class="input-box">
+                        <input name="magento_module" id="telephone" title="<?php echo Mage::helper('supportcontacts')->__('Magento module') ?>" value="" class="input-text" type="text" />
+                     </div>
+                </div> 
+            </li>
             <li class="wide">
-                <label for="comment" class="required"><em>*</em><?php echo Mage::helper('supportcontacts')->__('Comment') ?></label>
+                <label for="description" class="required"><em>*</em><?php echo Mage::helper('supportcontacts')->__('Description') ?></label>
                 <div class="input-box">
-                    <textarea name="comment" id="comment" title="<?php echo Mage::helper('supportcontacts')->__('Comment') ?>" class="required-entry input-text" cols="5" rows="3"></textarea>
+                    <textarea name="description" id="description" title="<?php echo Mage::helper('supportcontacts')->__('Description') ?>" class="required-entry input-text" cols="5" rows="3"></textarea>
                 </div>
             </li>
             <li>

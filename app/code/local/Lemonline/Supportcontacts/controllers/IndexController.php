@@ -44,7 +44,19 @@ class Lemonline_Supportcontacts_IndexController extends Mage_Core_Controller_Fro
                     $error = true;
                 }
 
-                if (!Zend_Validate::is(trim($post['comment']) , 'NotEmpty')) {
+                if (!Zend_Validate::is(trim($post['description']) , 'NotEmpty')) {
+                    $error = true;
+                }
+                
+                if (!Zend_Validate::is(trim($post['website_url']) , 'NotEmpty')) {
+                    $error = true;
+                }
+                
+                if (!Zend_Validate::is(trim($post['magento_version']) , 'NotEmpty')) {
+                    $error = true;
+                }
+                
+                if (!Zend_Validate::is(trim($post['magento_module']) , 'NotEmpty')) {
                     $error = true;
                 }
 

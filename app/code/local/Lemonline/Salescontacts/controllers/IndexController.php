@@ -44,7 +44,7 @@ class Lemonline_Salescontacts_IndexController extends Mage_Core_Controller_Front
                     $error = true;
                 }
 
-                if (!Zend_Validate::is(trim($post['comment']) , 'NotEmpty')) {
+                if (!Zend_Validate::is(trim($post['description']) , 'NotEmpty')) {
                     $error = true;
                 }
 
