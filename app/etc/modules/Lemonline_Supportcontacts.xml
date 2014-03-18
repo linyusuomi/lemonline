@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+<modules>
+   <Lemonline_Supportcontacts>
+      <active>true</active>
+      <codePool>local</codePool>
+      <version>1.0</version>
+   </Lemonline_Supportcontacts>
+</modules>
+</config>
