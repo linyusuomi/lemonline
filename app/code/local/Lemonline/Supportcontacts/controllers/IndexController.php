@@ -56,17 +56,50 @@ class Lemonline_Supportcontacts_IndexController extends Mage_Core_Controller_Fro
                     $error = true;
                 }
 
-                
-                
-                
-                
-                
-                
-                
+                /**************************************************************/
+                $fileName = '';
+                if (isset($_FILES['attachment']['name']) && $_FILES['attachment']['name'] != '') {
+                    try {
+                        $fileName       = $_FILES['attachment']['name'];
+                        $fileExt        = strtolower(substr(strrchr($fileName, ".") ,1));
+                        $fileNamewoe    = rtrim($fileName, $fileExt);
+                        $fileName       = preg_replace('/\s+', '', $fileNamewoe) . time() . '.' . $fileExt;
+ 
+                        $uploader       = new Varien_File_Uploader('attachment');
+                        $uploader->setAllowedExtensions(array('doc', 'docx','pdf','png','jpeg','jpg','pjpeg','gif','x-png'));
+                        $uploader->setAllowRenameFiles(false);
+                        $uploader->setFilesDispersion(false);
+                 
+                        $path = Mage::getBaseDir('media') . DS . 'contacts';
+                        if(!is_dir($path)){
+                            mkdir($path, 0777, true);
+                        }                  
+                        $uploader->save($path . DS, $fileName );
+ 
+                    } catch (Exception $e) {
+                        $error = true;
+                    }
+                }
+              
+                /**************************************************************/
+   
                 if ($error) {
                     throw new Exception();
                 }
                 $mailTemplate = Mage::getModel('core/email_template');
+                
+                /* @var $mailTemplate Mage_Core_Model_Email_Template */
+ 
+                /**************************************************************/
+                //sending file as attachment
+                $attachmentFilePath = Mage::getBaseDir('media'). DS . 'contacts' . DS . $fileName;
+                if(file_exists($attachmentFilePath)){
+                    $fileContents = file_get_contents($attachmentFilePath);
+                    $attachment   = $mailTemplate->getMail()->createAttachment($fileContents);
+                    $attachment->filename = $fileName;
+                }
+                /**************************************************************/
+                 
                 $mailTemplate->setDesignConfig(array('area' => 'frontend'))
                     ->setReplyTo($post['email'])
                     ->sendTransactional(
