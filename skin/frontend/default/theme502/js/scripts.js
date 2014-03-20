@@ -55,21 +55,7 @@ jQuery(document).ready(function(){
 
 	/*********************************************************************************************************** Header Buttons *********************************************************************/
 
-		jQuery('.header-button').not('.top-login').on("click", function(e){
-		    var ul=jQuery(this).find('ul')
-		    if(ul.is(':hidden'))
-		     ul.slideDown()
-		     ,jQuery(this).addClass('active')
-		    else
-		     ul.slideUp()
-		     ,jQuery(this).removeClass('active')
-		     jQuery('.header-button').not(this).removeClass('active'),
-		     jQuery('.header-button').not(this).find('ul').slideUp()
-		     jQuery('.header-button ul li').click(function(e){
-		      	 e.stopPropagation(); 
-		    	});
-		    	return false
-		   });
+		
 		   jQuery(document).on('click',function(){ 
 		    jQuery('.header-button').removeClass('active').find('ul').slideUp()
 		   });
@@ -82,8 +68,7 @@ jQuery(document).ready(function(){
    });
 
 	if(jQuery(".category-products").length){	jQuery('.products-grid .add-to-links li > a, .products-list .add-to-links li > a ').tooltip('hide')	};
-	qwe = jQuery('.lang-list ul li span').text();
-	jQuery('.lang-list > a').text(qwe);
+	
 
 	jQuery(window).bind('load resize',function(){
 	      sw = jQuery('.container').width();

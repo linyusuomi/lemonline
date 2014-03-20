@@ -37,16 +37,20 @@
 	<div class="container">
 		<div class="row">
             <div class="span12">
-                <div id="menu-icon"><?php echo $this->__('Categories') ?></div>
+                <div id="menu-icon"><?php echo $this->__('Home page') ?></div>
                 <ul id="nav" class="sf-menu">
                     <?php echo $_menu ?>
                     <li><a href="<?php echo $this->getUrl('') ?>" title=""><span><?php echo $this->__('services') ?></span></a></li>
                     <li><a href="<?php echo $this->getUrl('') ?>" title=""><span><?php echo $this->__('customers') ?></span></a></li>
-                    <li><a href="<?php echo $this->getUrl('contacts') ?>" title=""><span><?php echo $this->__('support') ?></span></a></li>
-                    <li><a href="<?php echo $this->getUrl('') ?>" title=""><span><?php echo $this->__('sales') ?></span></a></li>
+                    <li><a href="<?php echo $this->getUrl('support-contact') ?>" title=""><span><?php echo $this->__('support') ?></span></a></li>
+                    <li><a href="<?php echo $this->getUrl('sales-contact') ?>" title=""><span><?php echo $this->__('sales') ?></span></a></li>
                 </ul>
                 <ul class="sf-menu-phone">
                     <?php echo $_menu ?>
+                    <li><a href="<?php echo $this->getUrl('') ?>" title=""><span><?php echo $this->__('services') ?></span></a></li>
+                    <li><a href="<?php echo $this->getUrl('') ?>" title=""><span><?php echo $this->__('customers') ?></span></a></li>
+                    <li><a href="<?php echo $this->getUrl('support-contact') ?>" title=""><span><?php echo $this->__('support') ?></span></a></li>
+                    <li><a href="<?php echo $this->getUrl('sales-contact') ?>" title=""><span><?php echo $this->__('sales') ?></span></a></li>
                 </ul>
             </div>
         </div>
